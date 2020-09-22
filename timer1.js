@@ -1,6 +1,5 @@
 // implement an alarm clock / timer that will beep after a specified amount of time has passed
-// user can specifiy an unlimited number of alarms usling CL args
-
+// user can specifiy an unlimited number of alarms using command line inputs
 const timer = () => {
   const alertBell = () => process.stdout.write("\u0007");
   const sortNum = (a, b) => a - b;
@@ -15,9 +14,9 @@ const timer = () => {
 
   for (let i = 0; i < alarmTimes.length; i++) {
     setTimeout(() => {
-      console.log(`${alarmTimes[i]/1000}s: Ding!`);
+      console.log(`${alarmTimes[i] / 1000}s: Ding!`);
       alertBell();
-    }, alarmTimes[i])
+    }, alarmTimes[i]);
   }
 };
 
